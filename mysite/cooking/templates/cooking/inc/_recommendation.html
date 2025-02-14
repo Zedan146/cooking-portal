@@ -1,0 +1,13 @@
+
+    <div class="card" style="width: 18rem;">
+        {% if rec.photo %}
+        <img class="card-img-top" src="{{ rec.photo.url }}"
+             width="200" alt="">
+        {% else %}
+        <img class="card-img-top" src="https://17-school.gosuslugi.ru/netcat_files/9/67/foto_33.jpg"
+             width="200" alt="">
+        {% endif %}
+        <div class="card-body"><h5 class="card-title">{{ rec.title }}</h5><a href="{{ rec.get_absolute_url }}"
+                                                                             class="btn btn-primary">Подробнее</a>
+        </div>
+    </div>

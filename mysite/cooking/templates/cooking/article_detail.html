@@ -24,7 +24,7 @@
                 </p>
             </div>
             <div class="card-footer d-flex justify-content-between"><p class="card-text">{{ post.created_at }}</p>
-                <a href="/profile/1">Автор статьи: Какой то человек</a>
+                <a href="/profile/1">Автор статьи: </a>
                 <p class="card-text">{{ post.watched }}</p>
             </div>
         </div>
@@ -48,36 +48,9 @@
     <!--  Recommendation-->
     <div class="col-1"></div>
     <div class="col-4">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://17-school.gosuslugi.ru/netcat_files/9/67/foto_33.jpg"
-                 width="200" alt="">
-            <div class="card-body"><h5 class="card-title">Блюдо</h5><a href="#!" class="btn btn-primary">Подробнее</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://17-school.gosuslugi.ru/netcat_files/9/67/foto_33.jpg"
-                 width="200" alt="">
-            <div class="card-body"><h5 class="card-title">Блюдо</h5><a href="#!" class="btn btn-primary">Подробнее</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://17-school.gosuslugi.ru/netcat_files/9/67/foto_33.jpg"
-                 width="200" alt="">
-            <div class="card-body"><h5 class="card-title">Блюдо</h5><a href="#!" class="btn btn-primary">Подробнее</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://17-school.gosuslugi.ru/netcat_files/9/67/foto_33.jpg"
-                 width="200" alt="">
-            <div class="card-body"><h5 class="card-title">Блюдо</h5><a href="#!" class="btn btn-primary">Подробнее</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://17-school.gosuslugi.ru/netcat_files/9/67/foto_33.jpg"
-                 width="200" alt="">
-            <div class="card-body"><h5 class="card-title">Блюдо</h5><a href="#!" class="btn btn-primary">Подробнее</a>
-            </div>
-        </div>
+        {% for rec in rec_post %}
+        {% include 'cooking/inc/_recommendation.html' %}
+        {% endfor %}
     </div>
 </div>
 {% endblock main %}
