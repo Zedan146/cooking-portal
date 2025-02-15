@@ -4,11 +4,22 @@
 <div class="d-flex justify-content-center">
     <div class="card col-8 mb-4 mt-4">
         <div class="card-body">
-            <h2 class="text-center">Добавление новой статьи</h2>
+            <h2 class="text-center">
+                {% if 'update' in request.path %}
+                Обновление статьи
+                {% else %}
+                Добавление новой статьи
+                {% endif %}
+            </h2>
             <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="btn btn-primary" type="submit">Добавить статью</button>
+                <button class="btn btn-primary" type="submit">
+                    {% if 'update' in request.path %}
+                    Изменить статью
+                    {% else %}
+                    Добавить статью</button>
+                    {% endif %}
             </form>
         </div>
     </div>

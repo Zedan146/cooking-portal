@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Post  # Импротируем наши модели
+from .models import Category, Post, Comment  # Импротируем наши модели
 
 
 # Класс для настройки админки модели постов
@@ -19,4 +19,5 @@ class PostAdmin(admin.ModelAdmin):
 # Регистрируем наши модели в админке
 admin.site.register(Category)
 admin.site.register(Post, PostAdmin)
+admin.site.register(Comment)
 
