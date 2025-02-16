@@ -17,6 +17,9 @@
                                 <button class="btn btn-primary">Follow</button>
                                 <button class="btn btn-outline-primary">Message</button>
                             </div>
+                            {% if request.user == user %}
+                            <a href="{% url 'change_password' %}" class="dropdown-item">Изменить пароль</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -33,7 +36,7 @@
                                 </svg>
                                 Website
                             </h6>
-                            <span class="text-secondary">https://distro.uz</span>
+                            <span class="text-secondary"></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0">
@@ -158,5 +161,6 @@
         </div>
     </div>
 </div>
+<div><div style="margin-top: 270px;"></div></div>
 
 {% endblock %}

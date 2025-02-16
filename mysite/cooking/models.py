@@ -20,7 +20,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название статьи')
-    content = models.TextField(default='Скоро появится...', verbose_name='Контент')
+    content = models.TextField(verbose_name='Контент')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
     photo = models.ImageField(upload_to='photos/', blank=True, null=True, verbose_name='Фото')
